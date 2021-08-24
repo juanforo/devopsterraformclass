@@ -1,3 +1,7 @@
+variable instance_name {
+    type = string
+}
+
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 }
@@ -34,6 +38,6 @@ resource "aws_instance" "web" {
   subnet_id = aws_subnet.main.id
 
   tags = {
-    Name = "HelloWorld"
+    Name = var.instance_name
   }
 }
