@@ -1,1 +1,1 @@
-instance_name = "Nombre_divertido"
+instance_name = "kathe-test"
